@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 
 # Synopsis:
-# Run the test runner on a solution using the test runner Docker image.
-# The test runner Docker image is built automatically.
+# Run the analyzer on a solution using the analyzer Docker image.
+# The analyzer Docker image is built automatically.
 
 # Arguments:
 # $1: exercise slug

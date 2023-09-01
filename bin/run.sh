@@ -33,7 +33,7 @@ echo "${slug}: analyzing..."
 
 # Analyze the solution
 # TODO: replace the below command with your own command(s) 
-# to run the analysis
+# to analyze the solution and output the analysis.json file
 echo '{"comments": []}' > "${analysis_file}"
 
 echo "${slug}: done"
