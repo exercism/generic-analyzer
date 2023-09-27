@@ -17,14 +17,14 @@ exit_code=0
 for test_dir in tests/*; do
     test_dir_name=$(basename "${test_dir}")
     test_dir_path=$(realpath "${test_dir}")
-    analysis_file_path="${test_dir_path}/analysis.json"
-    expected_analysis_file_path="${test_dir_path}/expected_analysis.json"
 
     bin/run.sh "${test_dir_name}" "${test_dir_path}" "${test_dir_path}"
 
-    echo "${test_dir_name}: comparing analysis.json to expected_analysis.json"
+    file="analysis.json"
+    expected_file="expected_${file}"
+    echo "${test_dir_name}: comparing ${file} to ${expected_file}"
 
-    if ! diff "${analysis_file_path}" "${expected_analysis_file_path}"; then
+    if ! diff "${test_dir_path}/${file}" "${test_dir_path}/${expected_file}"; then
         exit_code=1
     fi
 done
