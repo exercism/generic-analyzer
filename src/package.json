@@ -1,0 +1,11 @@
+{
+  "name": "treesitter-tags",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "tree-sitter": "^0.20.5",
+    "tree-sitter-javascript": "^0.20.1"
+  }
+}
