@@ -1,2 +1,2 @@
-tests/**/*/analysis.json
-tests/**/*/tags.json
+/tests/**/*/analysis.json
+/tests/**/*/tags.json
