@@ -1,11 +1,11 @@
-# Exercism TRACK_NAME_HERE analyzer
+# Exercism TRACK_NAME analyzer
 
-The Docker image to automatically run tests on TRACK_NAME_HERE solutions submitted to [Exercism].
+The Docker image to automatically run tests on TRACK_NAME solutions submitted to [Exercism].
 
 ## Getting started
 
 Build the analyzer, conforming to the [analyzer interface specification](https://github.com/exercism/docs/blob/main/building/tooling/analyzers/interface.md).
-Update the files to match your track's needs. 
+Update the files to match your track's needs.
 At the very least, you'll need to update `bin/run.sh`, `Dockerfile` and the test solutions in the `tests` directory
 
 - Tip: look for `TODO:` comments to point you towards code that need updating
