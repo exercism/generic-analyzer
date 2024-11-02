@@ -1,6 +1,6 @@
-# Exercism TRACK_NAME analyzer
+# Exercism replace-this-with-the-track-name analyzer
 
-The Docker image to automatically run tests on TRACK_NAME solutions submitted to [Exercism].
+The Docker image to automatically run tests on replace-this-with-the-track-name solutions submitted to [Exercism].
 
 ## Getting started
 
