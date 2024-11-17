@@ -27,7 +27,7 @@ jobs:
           context: .
           push: false
           load: true
-          tags: exercism/TRACK_SLUG-analyzer
+          tags: exercism/replace-this-with-the-track-slug-analyzer
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
