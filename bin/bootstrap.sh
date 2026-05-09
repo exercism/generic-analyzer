@@ -30,6 +30,7 @@ fi
 
 required_tool gh
 required_tool jq
+required_tool perl
 
 ORG="exercism"
 REPO="${ORG}/${SLUG}-analyzer"
@@ -39,13 +40,11 @@ REPO_DIR=$(mktemp -d)
 cp -a . "${REPO_DIR}"
 cd "${REPO_DIR}" || die "Failed to cd to ${REPO_DIR}"
 
-for file in $(git grep --files-with-matches replace-this-with-the-track-slug); do
-    sed -i "s/replace-this-with-the-track-slug/${SLUG}/g" "${file}"
-done
+mapfile -t files < <(git grep --files-with-matches replace-this-with-the-track-slug)
+perl -pi -e "s/replace-this-with-the-track-slug/${SLUG}/g" "${files[@]}"
 
-for file in $(git grep --files-with-matches replace-this-with-the-track-name); do
-    sed -i "s/replace-this-with-the-track-name/${LANGUAGE}/g" "${file}"
-done
+mapfile -t files < <(git grep --files-with-matches replace-this-with-the-track-name)
+perl -pi -e "s/replace-this-with-the-track-name/${LANGUAGE}/g" "${files[@]}"
 
 rm -f bin/bootstrap.sh
 rm -rf .git
